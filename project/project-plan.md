@@ -38,7 +38,7 @@ The project will begin with data cleaning and preprocessing data for example han
 
 <!-- List of work packages ordered sequentially, each pointing to an issue with more details. -->
 
-1. Import CSV fodata [#1][i1]
+1. Import CSV data [#1][i1]
 2. Clean up data with the pipeline [#2][i2]
 3. Analyze the relevant columns and create an appropriate  pipeline [#3][i3]
 
