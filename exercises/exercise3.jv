@@ -1,4 +1,4 @@
-use { CountryCodes,CountryCodesConstraint} from './country-codes.jv';
+//use { CountryCodes,CountryCodesConstraint} from './country-codes.jv';
 
 pipeline CountryStatsPipeline {
 
@@ -68,7 +68,7 @@ pipeline CountryStatsPipeline {
     block CountryStatsBondIssuanceTableInterpreter oftype TableInterpreter {
         header: true;
         columns: [
-         "Country Code" oftype CountryCodes,
+         "Country Code" oftype CountryCodeAlpha3,
          "Bond Issuance Share" oftype BondIssuanceShare
         ];
     }
@@ -77,7 +77,7 @@ pipeline CountryStatsPipeline {
     block CountryStatsGDPPerCapitaTableInterpreter oftype TableInterpreter {
         header: true;
         columns: [
-         "Country Code" oftype CountryCodes,
+         "Country Code" oftype CountryCodeAlpha3,
          "GDP per Capita" oftype GDPPerCapita,
        
         ];
