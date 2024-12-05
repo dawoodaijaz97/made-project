@@ -89,7 +89,7 @@ pipeline BatteryTemperaturePipeline {
 
     block TableLoader oftype SQLiteLoader {
         table: "temperatures";
-        file: "./temperatures.csv";
+        file: "./temperatures.sqlite";
     }
 }
 
