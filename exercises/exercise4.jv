@@ -9,6 +9,7 @@ pipeline BatteryTemperaturePipeline {
         ->RenameHeaders
         ->TableInterpreter
         ->TemperatureConverter
+        ->TemperatureConverter2
         ->TableLoader;
 
 
@@ -84,6 +85,14 @@ pipeline BatteryTemperaturePipeline {
             'battery_temperature'
         ];
         outputColumn: 'battery_temperature';
+        uses: CelsiusToFahrenheit;
+    }
+
+        block TemperatureConverter2 oftype TableTransformer {
+        inputColumns: [
+            'temperature'
+        ];
+        outputColumn: 'temperature';
         uses: CelsiusToFahrenheit;
     }
 
