@@ -18,7 +18,7 @@ class TestDataPipeline(unittest.TestCase):
     def test_output_files_exist(self):
         """Test if expected output files are created"""
         # Replace 'data.sqlite' with your actual output filename
-        expected_file = os.path.join('..', 'data', 'data.sqlite')
+        expected_file = os.path.join('..', 'data', 'motor_vehicle_collisions_cleaned.csv')
         self.assertTrue(os.path.exists(expected_file), 
                        f"Expected output file {expected_file} not found")
         
@@ -27,7 +27,7 @@ class TestDataPipeline(unittest.TestCase):
     def test_output_file_not_empty(self):
         """Test if output files contain data"""
         # Replace 'data.sqlite' with your actual output filename
-        expected_file = os.path.join('..', 'data', 'data.sqlite')
+        expected_file = os.path.join('..', 'data', 'motor_vehicle_collisions_cleaned.csv')
         self.assertGreater(os.path.getsize(expected_file), 0, 
                           f"Output file {expected_file} is empty")
 
