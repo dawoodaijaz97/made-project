@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+cd "$(dirname "$0")"
 # Run Python tests
 echo "Running tests..."
 python test_pipeline.py -v
